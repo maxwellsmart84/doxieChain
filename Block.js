@@ -15,11 +15,15 @@ module.exports = class Block {
       }
       return SHA256(`${data}`);
     }
-    previousHash(hash) {
+    set previousHash(hash) {
       const self = this;
       const stringedHash = hash.toString();
       self.hash = SHA256(`${stringedHash}${self.data}`);
       return self.prevHashStore = hash;
+    }
+    get previousHash() {
+      const self = this;
+      return self.prevHashStore;
     }
 }
 
