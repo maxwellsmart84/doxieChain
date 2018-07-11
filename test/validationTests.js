@@ -1,5 +1,5 @@
-const Blockchain = require('../Blockchain.js').default;
-const Block = require('../Block.js').default;
+const Blockchain = require('../Blockchain.js');
+const Block = require('../Block.js');
 const assert = require('assert');
 
 describe('Blockchain Validation', function() {

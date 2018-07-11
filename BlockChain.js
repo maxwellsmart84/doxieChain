@@ -7,7 +7,7 @@ module.exports = class Blockchain {
     }
     addBlock(block) {
       const previousBlockIdx = this.chain.length - 1;
-      block.toPreviousHash(this.chain[previousBlockIdx].hash);
+      block.previousHash = this.chain[previousBlockIdx].hash;
       return this.chain = [...this.chain, block];
     }
     isValid() {
@@ -16,15 +16,12 @@ module.exports = class Blockchain {
             const rebuiltHash = SHA256(`${block.previousHash}${this.chain[index].data}`);
             if (index !== 0) {
                 if (block.previousHash !== this.chain[index > 0 ? index - 1 : 0].hash) {
-                    console.log('first', index)
                     return false;
                 }
                 if (block.hash.toString() !== rebuiltHash.toString()) {
-                    console.log('second', index)
                     return false;
                 }
             } else if (block.hash.toString() !== genesisHash.toString()) {
-                console.log('third', index)
                 return false;
             }
         }
