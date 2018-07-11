@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "assert": "^1.4.1",
+    "faker": "^4.1.0",
     "mocha": "^5.2.0"
   }
 }

@@ -1,7 +1,7 @@
-const Block = require('../../Block.js');
+const Block = require('../Block.js');
 const assert = require('assert');
 
-describe('Block', function() {
+describe('Block Hash', function() {
     let newBlock = new Block();
 
     it('should have a hash property', function(){

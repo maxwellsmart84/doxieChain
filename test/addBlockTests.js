@@ -5,7 +5,7 @@ const assert = require('assert');
 let blockchain;
 let newBlock;
 
-describe('Blockchain', function() {
+describe('Blockchain Add Block', function() {
     before(() => {
         blockchain = new Blockchain();
     });

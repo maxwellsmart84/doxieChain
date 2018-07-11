@@ -1,21 +1,18 @@
+const Block = require('../Block.js');
+const assert = require('assert');
 const SHA256 = require("crypto-js/sha256");
+const faker = require('faker');
 
-class Block {
-    constructor(data) {
-        this.hash = this.toHash(data);
-        this.data = data;
-        this.previousHash = '';
-    }
-    toHash(data) {
-        return SHA256(data);
-    }
-    toPreviousHash(prevHash) {
-        const self = this;
-        const stringedHash = prevHash.toString();
-        self.hash = SHA256(`${stringedHash}${self.data}`);
-        console.log('PREVIOUS HASH', stringedHash, 'DESIRED HASH', SHA256(`${stringedHash}${self.data}`).toString(), 'DATA HASH', SHA256(`${self.data}`).toString(), 'ACTUAL HASH', self.hash.toString());
-        return self.previousHash = prevHash;
-    }
-}
+describe('Block SHA Test', function() {
+    it('should store a random name', function() {
+        const randomName = faker.name.findName();
+        assert.equal(randomName, new Block(randomName).data)
+    });
 
-export default Block;
+    it('should hash some random data', function() {
+        const randomEmail = faker.internet.email();
+        const myHash = SHA256(randomEmail).toString();
+        const yourHash = new Block(randomEmail).hash.toString();
+        assert.equal(myHash, yourHash);
+    })
+})

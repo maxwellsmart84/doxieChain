@@ -1,8 +1,8 @@
-const Blockchain = require('../../Blockchain.js');
-const Block = require('../../Block.js');
+const Blockchain = require('../Blockchain.js');
+const Block = require('../Block.js');
 const assert = require('assert');
 
-describe('Blockchain', function() {
+describe('Blockchain Genesis', function() {
     it('should have a genesis block', function() {
         const blockchain = new Blockchain();
         const genesisBlock = blockchain.chain[0];

@@ -1,8 +1,7 @@
 const Block = require('./Block.js');
 const SHA256  = require("crypto-js/sha256");
 
-
-class Blockchain {
+module.exports = class Blockchain {
     constructor() {
         this.chain = [ new Block('genesis') ]
     }
@@ -33,4 +32,3 @@ class Blockchain {
     }
 }
 
-module.exports.Blockchain;

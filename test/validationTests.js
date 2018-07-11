@@ -1,8 +1,8 @@
-const Blockchain = require('../../Blockchain').default;
-const Block = require('../../Block').default;
+const Blockchain = require('../Blockchain.js').default;
+const Block = require('../Block.js').default;
 const assert = require('assert');
 
-describe('Blockchain', function() {
+describe('Blockchain Validation', function() {
   let blockchain;
   beforeEach(() => {
     blockchain = new Blockchain();
@@ -10,7 +10,7 @@ describe('Blockchain', function() {
     blockchain.addBlock(new Block("Peter"));
     blockchain.addBlock(new Block("James"));
   });
-  
+
   it('should be considered valid', function() {
     assert(blockchain.isValid());
   });
