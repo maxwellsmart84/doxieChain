@@ -1,6 +1,6 @@
 {
   "name": "doxie-chain",
-  "version": "1.0.2",
+  "version": "1.0.22",
   "description": "An exportabale Blockhain",
   "main": "index.js",
   "repository": {

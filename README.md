@@ -8,7 +8,7 @@ To add to a dependency to your project:
 
 Import/Require It
 
-`import { Block, BlockChain } from doxie-chain`
+`import { Block, Blockchain } from doxie-chain`
 or
 
 `const { Block, Blockchain } = require('doxie-chain');`
