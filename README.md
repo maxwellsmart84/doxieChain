@@ -27,7 +27,7 @@ Block contains the properties:
 
 ```
 const block = new Block('Batman')
-block.hash = //SHA256 hash of ${block.previouHash}${'Batman'}
+block.hash = //SHA256 hash of ${block.previouHash}$""{'Batman'}
 block.previousHash = // SHA256 hash of the previous block's hash in the chain, changing this will change the hash.
 block.data = 'Batman'
 ```
