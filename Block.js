@@ -9,7 +9,6 @@ module.exports = class Block {
     toHash(data) {
       const self = this;
       if (self.prevHashStore) {
-        console.log('if block', self.prevHashStore)
         const stringedHash = self.prevHashStore.toString();
         return SHA256(`${stringedHash}${data}`)
       }
