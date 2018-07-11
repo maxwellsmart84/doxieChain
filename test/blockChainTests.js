@@ -1,5 +1,5 @@
-import Blockchain from '../Blockchain';
-import Block from '../Block';
+const Blockchain = require('../Blockchain');
+const Block = require('../Block');
 const assert = require('assert');
 
 describe('Blockchain', function() {

@@ -1,5 +1,5 @@
-import Blockchain from '../Blockchain';
-import Block from '../Block';
+const Blockchain = require('../Blockchain');
+const Block = require('../Block');
 const assert = require('assert');
 const SHA256 = require("crypto-js/sha256");
 

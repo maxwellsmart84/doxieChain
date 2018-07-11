@@ -1,4 +1,4 @@
-import Block from '../Block';
+const Block = require('../Block');
 const assert = require('assert');
 
 describe('Block', function() {
