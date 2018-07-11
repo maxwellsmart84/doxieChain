@@ -1,7 +1,7 @@
 # Doxie Chain
 ### A lightweight Blockchain built in JS
 
-## Useage
+## Usage
 To add to a dependency to your project:
 
 `npm install doxie-chain --save`
