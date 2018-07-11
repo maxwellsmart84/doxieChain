@@ -1,4 +1,4 @@
-# Doxie Chain
+# Doxie Chain [![Build Status](https://travis-ci.org/maxwellsmart84/doxieChain.svg?branch=master)](https://travis-ci.org/maxwellsmart84/doxieChain)
 ### A lightweight Blockchain built in JS
 
 ## Usage
